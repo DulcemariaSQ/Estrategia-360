@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia 360 - Consultora de Marketing</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #167c4c;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            transition: opacity 1s;
+        }
+
+        .carousel img:not(:first-child) {
+            opacity: 0;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #167c4c;
+            margin: 40px 0 10px;
+        }
+
+        .sub-title {
+            text-align: center;
+            color: #38a16f;
+            margin-bottom: 40px;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: #167c4c;
+            margin-top: 40px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <h1>Estrategia 360</h1>
+    </div>
+
+    <div class="navbar">
+        <a href="#quienes-somos">Quienes Somos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#blogs">Blogs Informativos</a>
+    </div>
+
+    <div class="carousel" id="carousel">
+        <img src="image1.jpg" alt="Imagen 1">
+        <img src="image2.jpg" alt="Imagen 2">
+        <img src="image3.jpg" alt="Imagen 3">
+    </div>
+
+    <h2 class="section-title">Lee nuestro blog</h2>
+    <h3 class="sub-title">Entradas más recientes</h3>
+
+    <div class="footer-text">
+        <p>Algunas empresas con las que hemos trabajado</p>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('#carousel img');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].style.opacity = 1;
+        }
+
+        setInterval(showNextImage, 5000);
+    </script>
+</body>
+</html>
