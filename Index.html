@@ -12,12 +12,16 @@
 
         .logo-container {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background-color: #ffffff;
         }
 
+        .logo-container a {
+            display: inline-block;
+        }
+
         .logo-container img {
-            max-width: 300px;
+            max-width: 250px;
             height: auto;
         }
 
@@ -55,8 +59,13 @@
         .section-title {
             text-align: center;
             color: #167c4c;
-            margin: 40px 0 10px;
+            margin: 20px 0 10px;
             font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .section-title:hover {
+            text-decoration: underline;
         }
 
         .sub-title {
@@ -70,6 +79,7 @@
             color: #167c4c;
             margin-top: 40px;
             font-size: 2rem;
+            font-weight: bold;
         }
 
         .logos-section {
@@ -85,13 +95,15 @@
 </head>
 <body>
     <div class="logo-container">
-        <img src="https://github.com/DulcemariaSQ/Estrategia-360/blob/main/9f7b5ce7-7e7c-47d0-b275-c7f022b46c41.jpg?raw=true" alt="Estrategia 360 Logo">
+        <a href="index.html">
+            <img src="https://github.com/DulcemariaSQ/Estrategia-360/blob/main/9f7b5ce7-7e7c-47d0-b275-c7f022b46c41.jpg?raw=true" alt="Estrategia 360 Logo">
+        </a>
     </div>
 
     <div class="navbar">
-        <a href="#quienes-somos">Quienes Somos</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#blogs">Blogs Informativos</a>
+        <a href="quienessomos.html">Quienes Somos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="blogs.html">Blogs Informativos</a>
     </div>
 
     <div class="carousel" id="carousel">
@@ -100,7 +112,7 @@
         <img src="https://github.com/DulcemariaSQ/Estrategia-360/blob/main/24.png?raw=true" alt="Imagen 3">
     </div>
 
-    <h2 class="section-title">Lee nuestro blog</h2>
+    <h2 class="section-title" onclick="window.location.href='blogs.html'">Lee nuestro blog</h2>
     <h3 class="sub-title">Entradas más recientes</h3>
 
     <div class="footer-text">
